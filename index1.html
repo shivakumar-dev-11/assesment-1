@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sum</title>
+    <style>
+      .home {
+        background-color: antiquewhite;
+        text-align: center;
+       border: 2px solid black;
+       margin: 100px 400px 100px 400px;
+       padding-bottom: 80px;
+       
+      }
+    </style>
+  </head>
+  <body style="background-color: aqua;">
+    <div class="home">
+      <div><h1>sum of N numbers
+        
+      </h1></div>
+     
+       
+        <input id="xValue" type="number" placeholder="input num" >
+        <div style="padding: 40px;"> <button onclick="addNum()"> submit</button></div>
+      <h2 id="result"> </h2>
+      
+    
+
+
+
+    <script> 
+    function addNum(){
+     let  n=(document.getElementById("xValue").value)
+      n=Number(n);
+      
+        let result = n*(n+1)/2;
+        document.getElementById("result").innerHTML = "value"+result
+      }  
+    </script>
+  </body>
+</html>
