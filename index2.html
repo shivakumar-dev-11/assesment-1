@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table</title>
+    <style>
+      .tables {
+        text-align: center;
+        border: 2px solid black;
+        background-color: bisque;
+        margin: 300px 400px 100px 400px;
+      }
+    </style>
+  </head>
+  <body style="background-color: burlywood">
+    <div class="tables">
+      <h1>ENTER NUMBER FOR TABLE</h1>
+      <input id="sk" type="number" placeholder="place number" />
+      <div style="padding: 20px 30px">
+        <button onclick="table()">submit</button>
+      </div>
+      <h2 id="result"></h2>
+    </div>
+
+    <script>
+      function table() {
+        let n = document.getElementById("sk").value;
+        let result = "<h3> Table of " + n + "</h3>";
+        for (let i = 1; i <= 10; i++) {
+          result += `${n} * ${i} = ${i * n} <br>`;
+        }
+        document.getElementById("result").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>
