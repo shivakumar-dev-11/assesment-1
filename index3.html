@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document</title>
+    <style>
+      .mult {
+        background-color: antiquewhite;
+        text-align: center;
+        border: 2px solid black;
+        margin: 100px 400px 100px 400px;
+        padding-bottom: 80px;
+      }
+    </style>
+  </head>
+  <body style="background-color: bisque">
+    <div class="mult">
+      <h1>ENTER NUMBER FOR STARS</h1>
+      <input
+        style="padding: 10px 20px"
+        id="kk"
+        type="number"
+        placeholder="enter number"
+      />
+      <div style="padding-top: 30px">
+        <button style="padding: 10px 30px" onclick="stars()">submit</button>
+      </div>
+      <p id="result"></p>
+    </div>
+
+    <script>
+      function stars() {
+        let n = document.getElementById("kk").value;
+        let result = "";
+
+        for (let i = 1; i <= n; i++) {
+          result += "*".repeat(i) + "<br>";
+        }
+
+        document.getElementById("result").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>
